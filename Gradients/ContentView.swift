@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        LinearGradient(
+            gradient: Gradient(stops: [
+                .init(color: .white, location: 0.45),
+                .init(color: .black, location: 0.55),
+            ]),
+            startPoint: .top,
+            endPoint: .bottom
+        )
     }
 }
 
@@ -24,3 +25,11 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+// Linear Gradient
+
+//LinearGradient(
+//    gradient: Gradient(colors: [.white, .black]),
+//    startPoint: .top,
+//    endPoint: .bottom
+//)
