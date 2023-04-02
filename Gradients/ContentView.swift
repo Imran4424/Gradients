@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        LinearGradient(
-            gradient: Gradient(stops: [
-                .init(color: .white, location: 0.45),
-                .init(color: .black, location: 0.55),
-            ]),
-            startPoint: .top,
-            endPoint: .bottom
+        RadialGradient(
+            gradient: Gradient(colors: [.blue, .black]),
+            center: .center,
+            startRadius: 20,
+            endRadius: 200
         )
     }
 }
@@ -25,11 +23,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-// Linear Gradient
-
-//LinearGradient(
-//    gradient: Gradient(colors: [.white, .black]),
-//    startPoint: .top,
-//    endPoint: .bottom
-//)
